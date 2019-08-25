@@ -43,7 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -97,7 +97,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <AdditionalLibraryDirectories>..\packages\EasyHookNativePackage.2.7.7097\build\native\lib\Win32\v110\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\packages\EasyHookNativePackage.2.7.7097\build\native\lib\Win32\v110\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -110,7 +110,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <AdditionalLibraryDirectories>..\packages\EasyHookNativePackage.2.7.7097\build\native\lib\Win32\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\packages\EasyHookNativePackage.2.7.7097\build\native\lib\x64\v110\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>

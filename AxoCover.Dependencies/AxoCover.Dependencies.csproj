@@ -259,6 +259,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Link>%(Filename)%(Extension)</Link>
     </Content>
+    <Content Include="..\Win32\AxoCover.Native.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>x86\%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include="..\x64\AxoCover.Native.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>x64\%(Filename)%(Extension)</Link>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\Newtonsoft.Json.*\lib\net45\Newtonsoft.Json.dll">
