@@ -1,11 +1,11 @@
-using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity;
 
 namespace AxoCover.Models.Toolkit
 {
-  public class Multiplexer<T> : IMultiplexer
+    public class Multiplexer<T> : IMultiplexer
   {
     protected readonly Dictionary<string, T> _implementations;
     public IEnumerable<string> Implementations

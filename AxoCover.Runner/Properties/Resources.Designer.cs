@@ -19,7 +19,7 @@ namespace AxoCover.Runner.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -62,16 +62,16 @@ namespace AxoCover.Runner.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to 
-        ///         ____
-        ///        /    \
-        ///        |    |
-        ///        \    /
-        ///        /    \
-        ///       /      \
-        ///   ___/        \___
-        ///  /                \
-        ///  |    ________    |
-        ///  \___/        \___/
+        ///       ___
+        ///      /   \
+        ///      |   |
+        ///      \   /
+        ///      /   \
+        ///     /     \
+        /// ___/       \___
+        ////               \
+        ///|    _______    |
+        ///\___/       \___/
         ///
         ///AxoCover Test Runner Console
         ///(c) Peter Major 2017

@@ -2,15 +2,15 @@ using AxoCover.Common.Events;
 using AxoCover.Models.Storage;
 using AxoCover.Models.Testing.Data;
 using AxoCover.Models.Toolkit;
-using Microsoft.Practices.Unity;
 using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using Unity;
 
 namespace AxoCover.Models.Testing.Execution
 {
-  public class MultiplexedTestRunner : Multiplexer<ITestRunner>, ITestRunner
+    public class MultiplexedTestRunner : Multiplexer<ITestRunner>, ITestRunner
   {
     public event EventHandler DebuggingStarted;
     public event EventHandler<EventArgs<TestMethod>> TestStarted;

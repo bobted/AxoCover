@@ -7,11 +7,12 @@ using AxoCover.Models.Testing.Discovery;
 using AxoCover.Models.Testing.Execution;
 using AxoCover.Models.Testing.Results;
 using AxoCover.Models.Updater;
-using Microsoft.Practices.Unity;
+using Unity;
+using Unity.Lifetime;
 
 namespace AxoCover.Models
 {
-  public static class ContainerProvider
+    public static class ContainerProvider
   {
     private static IUnityContainer _container;
     public static IUnityContainer Container

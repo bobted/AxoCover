@@ -2,7 +2,7 @@
 using AxoCover.Models.Storage;
 using AxoCover.Models.Updater;
 using AxoCover.Views;
-using Microsoft.Practices.Unity;
+using Unity;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
