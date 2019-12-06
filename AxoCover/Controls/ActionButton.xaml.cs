@@ -17,7 +17,7 @@ namespace AxoCover.Controls
     {
       var actionButton = d as ActionButton;
 
-      if(actionButton.ToolTip == null && actionButton.Text != null)
+      if (actionButton.ToolTip == null && actionButton.Text != null)
       {
         actionButton.ToolTip = actionButton.Text;
       }
@@ -99,7 +99,8 @@ namespace AxoCover.Controls
           FlowDirection.RightToLeft,
           new Typeface(_text.FontFamily, _text.FontStyle, _text.FontWeight, _text.FontStretch),
           _text.FontSize,
-          Brushes.Black);
+          Brushes.Black,
+          1.0d);
 
           ToolTipService.SetIsEnabled(this, formattedText.Width > _text.ActualWidth + 1.5);
         }

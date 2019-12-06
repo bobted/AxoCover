@@ -1,17 +1,16 @@
-﻿using AxoCover.Models;
+﻿using System;
+using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows;
+using AxoCover.Models;
 using AxoCover.Models.Storage;
 using AxoCover.Models.Updater;
 using AxoCover.Views;
 using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
-using System;
-using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Windows;
-using System.Windows.Threading;
 
 namespace AxoCover
 {
@@ -54,20 +53,23 @@ namespace AxoCover
 
     private async System.Threading.Tasks.Task InitializeTelemetryAsync()
     {
-      if (!_options.IsTelemetryModeSelected)
+      await System.Threading.Tasks.Task.Run(() =>
       {
-        ThreadHelper.ThrowIfNotOnUIThread();
-
-        var dialog = new ViewDialog<TelemetryIntroductionView>()
+        if (!_options.IsTelemetryModeSelected)
         {
-          ResizeMode = ResizeMode.NoResize
-        };
+          ThreadHelper.ThrowIfNotOnUIThread();
 
-        if (dialog.ShowDialog() == true)
-        {
-          _options.IsTelemetryModeSelected = true;
+          var dialog = new ViewDialog<TelemetryIntroductionView>()
+          {
+            ResizeMode = ResizeMode.NoResize
+          };
+
+          if (dialog.ShowDialog() == true)
+          {
+            _options.IsTelemetryModeSelected = true;
+          }
         }
-      }
+      });
     }
   }
 }

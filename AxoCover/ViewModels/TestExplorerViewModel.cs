@@ -1,4 +1,11 @@
-﻿using AxoCover.Commands;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
+using AxoCover.Commands;
 using AxoCover.Common.Events;
 using AxoCover.Common.Extensions;
 using AxoCover.Models.Editor;
@@ -8,13 +15,6 @@ using AxoCover.Models.Testing.Data;
 using AxoCover.Models.Testing.Discovery;
 using AxoCover.Models.Testing.Execution;
 using AxoCover.Models.Testing.Results;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
 
 namespace AxoCover.ViewModels
 {
@@ -358,14 +358,14 @@ namespace AxoCover.ViewModels
     }
 
     public TestExplorerViewModel(
-      IEditorContext editorContext, 
-      ITestProvider testProvider, 
-      ITestRunner testRunner, 
-      IResultProvider resultProvider, 
-      ICoverageProvider coverageProvider, 
-      IOptions options, 
-      SelectTestCommand selectTestCommand, 
-      JumpToTestCommand jumpToTestCommand, 
+      IEditorContext editorContext,
+      ITestProvider testProvider,
+      ITestRunner testRunner,
+      IResultProvider resultProvider,
+      ICoverageProvider coverageProvider,
+      IOptions options,
+      SelectTestCommand selectTestCommand,
+      JumpToTestCommand jumpToTestCommand,
       RunTestCommand runTestCommand,
       CoverTestCommand coverTestCommand,
       DebugTestCommand debugTestCommand)
@@ -415,7 +415,7 @@ namespace AxoCover.ViewModels
 
       if (_editorContext.Solution.IsOpen)
       {
-        LoadSolution();
+        LoadSolution().GetAwaiter();
       }
     }
 
@@ -442,7 +442,7 @@ namespace AxoCover.ViewModels
 
       if (openFileDialog.ShowDialog() == true)
       {
-        if(_coverageProvider.TryOpenCoverageReport(openFileDialog.FileName))
+        if (_coverageProvider.TryOpenCoverageReport(openFileDialog.FileName))
         {
           IsReportAvailable = true;
           IsReportTabSelected = true;
