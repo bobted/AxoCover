@@ -1,5 +1,4 @@
-﻿using AxoCover.Common.Models;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,6 +8,7 @@ using System.Management;
 using System.Reflection;
 using System.Windows.Threading;
 using System.Xml.Serialization;
+using AxoCover.Common.Models;
 
 namespace AxoCover.Common.Extensions
 {
@@ -17,7 +17,7 @@ namespace AxoCover.Common.Extensions
     public static IEnumerable<Type> FindImplementers<T>(this Assembly assembly)
     {
       return assembly.GetExportedTypes()
-        .Where(p => p.GetInterfaces().Any(q => q == typeof(T)));
+        .Where(p => p.GetInterfaces().Any(q => q.FullName.Equals(typeof(T).FullName, StringComparison.OrdinalIgnoreCase)));
     }
 
     public static string ToXml<T>(this T value)
@@ -269,7 +269,7 @@ namespace AxoCover.Common.Extensions
 
     public static TItem Item<TItem>(this TItem[] items, int index)
     {
-      if(index < items.Length)
+      if (index < items.Length)
       {
         return items[index];
       }
