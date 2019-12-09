@@ -1,3 +1,7 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 using AxoCover.Common.Extensions;
 using AxoCover.Common.Models;
 using AxoCover.Common.Runner;
@@ -5,10 +9,6 @@ using AxoCover.Common.Settings;
 using AxoCover.Models.Editor;
 using AxoCover.Models.Testing.Data;
 using EnvDTE;
-using System;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace AxoCover.Models.Testing.Adapters
 {
@@ -68,7 +68,9 @@ namespace AxoCover.Models.Testing.Adapters
 
     public xUnitAdapter(IEditorContext editorContext)
     {
-      _assemblyPath = Path.Combine(AxoCoverPackage.PackageRoot, @"xUnitAdapter\xunit.runner.visualstudio.testadapter.dll");
+      _assemblyPath = Path.Combine(AxoCoverPackage.PackageRoot, @"xUnitAdapter\netcore\xunit.runner.visualstudio.dotnetcore.testadapter.dll");
+      if (!File.Exists(_assemblyPath))
+        _assemblyPath = Path.Combine(AxoCoverPackage.PackageRoot, @"xUnitAdapter\xunit.runner.visualstudio.testadapter.dll");
       _redirectedAssemblies = Directory.GetFiles(Path.GetDirectoryName(_assemblyPath), "*.dll");
     }
   }
