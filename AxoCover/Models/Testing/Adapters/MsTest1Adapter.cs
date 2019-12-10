@@ -9,43 +9,43 @@ using System.IO;
 
 namespace AxoCover.Models.Testing.Adapters
 {
-  public class MsTest1Adapter : ITestAdapter
-  {
-    public string Name => "MSTestV1";
-
-    public TestAdapterMode Mode => TestAdapterMode.Integrated;
-
-    public string ExecutorUri => "executor://mstestadapter/v1";
-
-    public bool IsTestSource(Project project)
+    public class MsTest1Adapter : ITestAdapter
     {
-      return project.TryGetReference("Microsoft.VisualStudio.QualityTools.UnitTestFramework", out _);
-    }
+        public string Name => "MSTestV1";
 
-    public bool CanProcessCase(TestCase testCase)
-    {
-      return false;
-    }
+        public TestAdapterMode Mode => TestAdapterMode.Integrated;
 
-    public void ProcessCase(TestCase testCase, ref CodeItemKind testItemKind, ref string testItemPath, ref string displayName)
-    {
-      throw new NotSupportedException();
-    }
+        public string ExecutorUri => "executor://mstestadapter/v1";
 
-    public TestAdapterOptions GetLoadingOptions()
-    {
-      return new TestAdapterOptions()
-      {
-        AssemblyPath = _assemblyPath,
-        ExtensionUri = ExecutorUri
-      };
-    }
+        public bool IsTestSource(Project project)
+        {
+            return project.TryGetReference("Microsoft.VisualStudio.QualityTools.UnitTestFramework", out _);
+        }
 
-    private readonly string _assemblyPath;
+        public bool CanProcessCase(TestCase testCase)
+        {
+            return false;
+        }
 
-    public MsTest1Adapter(IEditorContext editorContext)
-    {
-      _assemblyPath = Path.Combine(editorContext.RootPath, @"CommonExtensions\Microsoft\TestWindow\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.VSTestIntegration.dll");
+        public void ProcessCase(TestCase testCase, ref CodeItemKind testItemKind, ref string testItemPath, ref string displayName)
+        {
+            throw new NotSupportedException();
+        }
+
+        public TestAdapterOptions GetLoadingOptions()
+        {
+            return new TestAdapterOptions()
+            {
+                AssemblyPath = _assemblyPath,
+                ExtensionUri = ExecutorUri
+            };
+        }
+
+        private readonly string _assemblyPath;
+
+        public MsTest1Adapter(IEditorContext editorContext)
+        {
+            _assemblyPath = Path.Combine(editorContext.RootPath, @"Extensions\TestPlatform\Extensions\Microsoft.VisualStudio.TestPlatform.Extensions.VSTestIntegration.dll");
+        }
     }
-  }
 }

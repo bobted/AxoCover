@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 namespace AxoCover.Properties {
-    
-    
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.1.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
+
         public static Settings Default {
             get {
                 return defaultInstance;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -34,7 +34,7 @@ namespace AxoCover.Properties {
                 this["TestRunner"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -46,7 +46,7 @@ namespace AxoCover.Properties {
                 this["IsShowingLineCoverage"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute")]
@@ -58,7 +58,7 @@ namespace AxoCover.Properties {
                 this["ExcludeAttributes"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -70,7 +70,7 @@ namespace AxoCover.Properties {
                 this["ExcludeFiles"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -82,7 +82,7 @@ namespace AxoCover.Properties {
                 this["ExcludeDirectories"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("+[*]*")]
@@ -94,7 +94,7 @@ namespace AxoCover.Properties {
                 this["Filters"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -106,7 +106,7 @@ namespace AxoCover.Properties {
                 this["IsShowingBranchCoverage"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -118,7 +118,7 @@ namespace AxoCover.Properties {
                 this["IsShowingExceptions"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -130,7 +130,7 @@ namespace AxoCover.Properties {
                 this["IsShowingPartialCoverage"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -142,7 +142,7 @@ namespace AxoCover.Properties {
                 this["IsIncludingSolutionAssemblies"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -154,7 +154,7 @@ namespace AxoCover.Properties {
                 this["IsExcludingTestAssemblies"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -166,7 +166,7 @@ namespace AxoCover.Properties {
                 this["IsCoveringByTest"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("#FF008000")]
@@ -178,7 +178,7 @@ namespace AxoCover.Properties {
                 this["CoveredColor"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("#FFFFCC00")]
@@ -190,7 +190,7 @@ namespace AxoCover.Properties {
                 this["MixedColor"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("#FFE51300")]
@@ -202,7 +202,7 @@ namespace AxoCover.Properties {
                 this["UncoveredColor"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("#FF00FF00")]
@@ -214,7 +214,7 @@ namespace AxoCover.Properties {
                 this["SelectedColor"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("#FFE51300")]
@@ -226,7 +226,7 @@ namespace AxoCover.Properties {
                 this["ExceptionOriginColor"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("#FFFFCC00")]
@@ -238,7 +238,7 @@ namespace AxoCover.Properties {
                 this["ExceptionTraceColor"] = value;
             }
         }
-        
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/axodox/AxoCover/issues")]
@@ -247,7 +247,7 @@ namespace AxoCover.Properties {
                 return ((string)(this["IssuesUrl"]));
             }
         }
-        
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("support+a55607fb8aa74170a9db076bb26bafd5@feedback.hockeyapp.net ")]
@@ -256,7 +256,7 @@ namespace AxoCover.Properties {
                 return ((string)(this["FeedbackEmail"]));
             }
         }
-        
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("b11224706abc4b7cb5bd5b70396ee7c3")]
@@ -265,7 +265,7 @@ namespace AxoCover.Properties {
                 return ((string)(this["TelemetryKey"]));
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("00000000-0000-0000-0000-000000000000")]
@@ -277,7 +277,7 @@ namespace AxoCover.Properties {
                 this["InstallationId"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -289,7 +289,7 @@ namespace AxoCover.Properties {
                 this["IsTelemetryEnabled"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -301,7 +301,7 @@ namespace AxoCover.Properties {
                 this["IsTelemetryModeSelected"] = value;
             }
         }
-        
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://github.com/axodox/AxoCover")]
@@ -310,7 +310,7 @@ namespace AxoCover.Properties {
                 return ((string)(this["SourceCodeUrl"]));
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("x86")]
@@ -322,7 +322,7 @@ namespace AxoCover.Properties {
                 this["TestPlatform"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("STA")]
@@ -334,7 +334,7 @@ namespace AxoCover.Properties {
                 this["TestApartmentState"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -346,7 +346,7 @@ namespace AxoCover.Properties {
                 this["TestSettings"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -358,7 +358,7 @@ namespace AxoCover.Properties {
                 this["IsMergingByHash"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -370,7 +370,7 @@ namespace AxoCover.Properties {
                 this["IsSkippingAutoProps"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Standard")]
@@ -382,7 +382,7 @@ namespace AxoCover.Properties {
                 this["TestAdapterMode"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("[]")]
@@ -394,7 +394,7 @@ namespace AxoCover.Properties {
                 this["ReleaseListCache"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("09/02/2016 20:41:51")]
@@ -406,7 +406,7 @@ namespace AxoCover.Properties {
                 this["ReleaseListUpdateTime"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("[]")]
@@ -418,7 +418,7 @@ namespace AxoCover.Properties {
                 this["ReleaseRollbackList"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -430,7 +430,7 @@ namespace AxoCover.Properties {
                 this["ReleaseBranch"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -442,7 +442,7 @@ namespace AxoCover.Properties {
                 this["IsUpdatingAutomatically"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Version ReleaseInstalled {
@@ -453,7 +453,7 @@ namespace AxoCover.Properties {
                 this["ReleaseInstalled"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -465,7 +465,7 @@ namespace AxoCover.Properties {
                 this["IsRedirectingFrameworkAssemblies"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Tcp")]
@@ -477,7 +477,7 @@ namespace AxoCover.Properties {
                 this["TestProtocol"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
@@ -489,7 +489,7 @@ namespace AxoCover.Properties {
                 this["StartupTimeout"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
@@ -501,7 +501,7 @@ namespace AxoCover.Properties {
                 this["DebuggerTimeout"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -513,7 +513,7 @@ namespace AxoCover.Properties {
                 this["IsDebugModeEnabled"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
@@ -525,7 +525,7 @@ namespace AxoCover.Properties {
                 this["IsVisitorRecordLimited"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
@@ -537,7 +537,7 @@ namespace AxoCover.Properties {
                 this["VisitorCountLimit"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -549,7 +549,7 @@ namespace AxoCover.Properties {
                 this["IsAutoBuildEnabled"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
@@ -561,7 +561,7 @@ namespace AxoCover.Properties {
                 this["IsShowingAnchors"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("user")]
