@@ -228,6 +228,7 @@
     <Compile Include="Models\Testing\Adapters\NUnitAdapter.cs" />
     <Compile Include="Models\Testing\Adapters\TestAdapterRepository.cs" />
     <Compile Include="Models\Testing\Adapters\xUnitAdapter.cs" />
+    <Compile Include="Models\Testing\Adapters\xUnitNetCoreAdapter.cs" />
     <Compile Include="Models\Testing\Execution\AxoTestRunner.cs" />
     <Compile Include="Models\Toolkit\BrushAndPenContainer.cs" />
     <Compile Include="Commands\TestCommands.cs" />

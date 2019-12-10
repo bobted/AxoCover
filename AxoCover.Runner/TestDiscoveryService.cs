@@ -1,16 +1,16 @@
-﻿using AxoCover.Common.Extensions;
-using AxoCover.Common.Models;
-using AxoCover.Common.Runner;
-using AxoCover.Runner.Properties;
-using AxoCover.Runner.Settings;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.ServiceModel;
 using System.Threading;
+using AxoCover.Common.Extensions;
+using AxoCover.Common.Models;
+using AxoCover.Common.Runner;
+using AxoCover.Runner.Properties;
+using AxoCover.Runner.Settings;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter;
 
 namespace AxoCover.Runner
 {
@@ -29,9 +29,10 @@ namespace AxoCover.Runner
       return Process.GetCurrentProcess().Id;
     }
 
-    private ITestDiscoverer[] LoadDiscoverers(string adapterSource)
+    //////private ITestDiscoverer[] LoadDiscoverers(string adapterSource)
+    private object[] LoadDiscoverers(string adapterSource)
     {
-      var testDiscoverers = new List<ITestDiscoverer>();
+      var testDiscoverers = new List<object>();
       try
       {
         _monitor.RecordMessage(TestMessageLevel.Informational, $">> Loading assembly from {adapterSource}...");
@@ -41,8 +42,15 @@ namespace AxoCover.Runner
         {
           try
           {
-            var testDiscoverer = Activator.CreateInstance(implementer) as ITestDiscoverer;
-            testDiscoverers.Add(testDiscoverer);
+            var discoverTestsMethod = implementer.GetMethod(nameof(ITestDiscoverer.DiscoverTests), BindingFlags.Public | BindingFlags.Instance);
+            if (discoverTestsMethod == null)
+              continue;
+
+            var implInstance = Activator.CreateInstance(implementer);
+            testDiscoverers.Add(implInstance);
+
+            //////var testDiscoverer = Activator.CreateInstance(implementer) as ITestDiscoverer;
+            //////testDiscoverers.Add(testDiscoverer);
 
             _monitor.RecordMessage(TestMessageLevel.Informational, $"|| Loaded discoverer: {implementer.FullName}.");
           }
@@ -63,7 +71,7 @@ namespace AxoCover.Runner
 
     public TestCase[] DiscoverTests(TestDiscoveryTask[] discoveryTasks, string runSettingsPath)
     {
-      _monitor.RecordMessage(TestMessageLevel.Informational, Resources.Branding);      
+      _monitor.RecordMessage(TestMessageLevel.Informational, Resources.Branding);
 
       Thread.CurrentThread.Name = "Test discoverer";
       Thread.CurrentThread.IsBackground = true;
@@ -81,7 +89,7 @@ namespace AxoCover.Runner
         var runSettings = new RunSettings(string.IsNullOrEmpty(runSettingsPath) ? null : File.ReadAllText(runSettingsPath));
         var context = new TestDiscoveryContext(_monitor, runSettings);
 
-        foreach(var discoveryTask in discoveryTasks)
+        foreach (var discoveryTask in discoveryTasks)
         {
           NativeServices.ExecuteWithFileRedirection(discoveryTask.TestAdapterOptions, () =>
           {
@@ -95,7 +103,10 @@ namespace AxoCover.Runner
                 _monitor.RecordMessage(TestMessageLevel.Informational, $"|| Checking {testSourcePath}...");
                 try
                 {
-                  testDiscoverer.DiscoverTests(new[] { testSourcePath }, context, context, context);
+                  var discoverTestsMethod = testDiscoverer.GetType().GetMethod(nameof(ITestDiscoverer.DiscoverTests));
+                  discoverTestsMethod.Invoke(testDiscoverer, new object[] { new[] { testSourcePath }, context, context, context });
+
+                  //////testDiscoverer.DiscoverTests(new[] { testSourcePath }, context, context, context);
                 }
                 catch (Exception e)
                 {
@@ -106,7 +117,7 @@ namespace AxoCover.Runner
             }
           }, (level, message) => _monitor.RecordMessage(level, "| " + message));
         }
-        
+
         _monitor.RecordMessage(TestMessageLevel.Informational, $"< Test discovery finished.");
         return context.TestCases.Convert();
       }

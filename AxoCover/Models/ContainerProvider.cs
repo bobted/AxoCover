@@ -34,6 +34,7 @@ namespace AxoCover.Models
       Container.RegisterType<ITestAdapter, NUnit2Adapter>("nUnit2");
       Container.RegisterType<ITestAdapter, NUnit3Adapter>("nUnit3");
       Container.RegisterType<ITestAdapter, xUnitAdapter>("xUnit");
+      Container.RegisterType<ITestAdapter, xUnitNetCoreAdapter>("xunit.net");
       Container.RegisterType<ITestAdapterRepository, TestAdapterRepository>();
       Container.RegisterType<ITestProvider, TestProvider>(new ContainerControlledLifetimeManager());
       Container.RegisterType<IEditorContext, EditorContext>(new ContainerControlledLifetimeManager());
