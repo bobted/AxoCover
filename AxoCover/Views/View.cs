@@ -1,7 +1,7 @@
 ﻿using AxoCover.Controls;
 using AxoCover.Models;
 using AxoCover.ViewModels;
-using Microsoft.Practices.Unity;
+using Unity;
 using System.Windows;
 using System.Windows.Controls;
 

@@ -1,11 +1,12 @@
 ﻿using AxoCover.Models;
 using AxoCover.Models.Telemetry;
-using Microsoft.Practices.Unity;
+using Unity;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Utilities;
 using System;
 using System.ComponentModel.Composition;
+using Unity.Resolution;
 
 namespace AxoCover
 {

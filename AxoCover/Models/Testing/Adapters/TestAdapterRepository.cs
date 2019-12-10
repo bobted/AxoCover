@@ -1,10 +1,10 @@
-using Microsoft.Practices.Unity;
 using System.Collections.Generic;
 using System.Linq;
+using Unity;
 
 namespace AxoCover.Models.Testing.Adapters
 {
-  public class TestAdapterRepository : ITestAdapterRepository
+    public class TestAdapterRepository : ITestAdapterRepository
   {
     public IDictionary<string, ITestAdapter> Adapters { get; private set; }
 
